@@ -21,6 +21,7 @@ def unlock(filename):
                 print("INTERNAL ERROR ",filename)
                 return 2
             textfile.seek(0)
+            textfile.truncate(0)
             textfile.write(fixedtextiinside)
 
     shutil.make_archive(filename,"zip","temp")
